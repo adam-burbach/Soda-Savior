@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "soda-runner",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8934", "--directory", "C:\\Users\\adamb\\AppData\\Local\\Temp\\claude\\C--Users-adamb-Claude-Motion-Animation\\f2693b9b-6b8c-41ae-963a-92c38d94d2c0\\scratchpad"],
+      "port": 8934
+    }
+  ]
+}
