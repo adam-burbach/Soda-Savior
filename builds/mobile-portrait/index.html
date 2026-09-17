@@ -1144,8 +1144,7 @@
       if (x>=W/2-gap/2-btnW && x<=W/2-gap/2){ SFX.button(); resetProgress(); switchScene('INTRO'); }
       else if (x>=W/2+gap/2 && x<=W/2+gap/2+btnW){
         SFX.button();
-        ctx.fillStyle = 'rgba(0,0,0,0.85)'; ctx.fillRect(0,0,W,H);
-        wrapText('Thanks for playing. Ready to make it real? Call 1-800-438-2653 and ask Coca-Cola to bring back TaB.', W/2, H/2, 9, COLOR.gold, 'center', W-70, 18);
+        window.open('https://www.savetabsoda.com', '_blank', 'noopener');
       }
     }
   });
