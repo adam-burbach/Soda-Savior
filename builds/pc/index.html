@@ -656,7 +656,7 @@
     function spawnObstacle(){
       var type = OBST_TYPES[Math.floor(Math.random()*OBST_TYPES.length)];
       obstacles.push({ type:type, x:W+40 });
-      obstacleTimer = 1.8 + Math.random()*1.4;
+      obstacleTimer = 2.6 + Math.random()*1.6;
     }
 
     function stealItem(){
@@ -685,7 +685,7 @@
         runTimeLeft = RUN_DURATION;
         pickups = []; pickupTimer = 0.8; pickupsSpawned = 0;
         jimothies = []; jimothyTimer = 5 + Math.random()*3;
-        obstacles = []; obstacleTimer = 1.5;
+        obstacles = []; obstacleTimer = 2.2;
         bgScroll = 0; bgIndex = 0; bgNextIndex = 1; bgTimer = BG_ROTATE; bgFadeT = 0;
         fogScroll = 0;
         powerups = []; powerupsRemaining = 1 + (Math.random() < 0.5 ? 1 : 0);
