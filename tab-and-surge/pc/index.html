@@ -425,9 +425,20 @@
     currentName = name;
     current = Scenes[name];
     if (current.enter) current.enter(payload);
-    var chromeDisplay = (name === 'TITLE_CARD' || name === 'PLAYER_INTRO') ? 'none' : '';
-    document.getElementById('controlsRow').style.display = chromeDisplay;
-    document.getElementById('hintRow').style.display = chromeDisplay;
+    var controlsEl = document.getElementById('controlsRow');
+    var hintEl = document.getElementById('hintRow');
+    if (name === 'TITLE_CARD' || name === 'PLAYER_INTRO'){
+      controlsEl.style.display = 'none';
+      hintEl.style.display = 'none';
+    } else if (name === 'RUNNER'){
+      controlsEl.style.display = '';
+      hintEl.style.display = '';
+      hintEl.innerHTML = '<kbd>↑</kbd>/<kbd>Space</kbd> jump';
+    } else {
+      controlsEl.style.display = 'none';
+      hintEl.style.display = '';
+      hintEl.innerHTML = '<kbd>Enter</kbd> continue';
+    }
   }
   function update(dt){ if (current && current.update) current.update(dt); }
   function draw(){ if (current && current.draw) current.draw(); }
